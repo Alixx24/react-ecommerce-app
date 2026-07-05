@@ -3,7 +3,7 @@ import type { ComponentProps, CSSProperties } from "react";
 type TVariant = "primary" | "secondary" | "danger" | "success" | "warning";
 
 type TButton = ComponentProps<"button"> & {
-    variant: TVariant;
+    variant?: TVariant;
 };
 
 function Button({ children, variant, style, ...rest }: TButton) {
@@ -16,7 +16,7 @@ function Button({ children, variant, style, ...rest }: TButton) {
 
 export default Button;
 
-function checkVariant(variant: TVariant): CSSProperties {
+function checkVariant(variant?: TVariant): CSSProperties {
     switch (variant) {
         case "primary":
             return { backgroundColor: "blue", color: "white" };

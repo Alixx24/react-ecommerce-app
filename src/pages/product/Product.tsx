@@ -11,9 +11,9 @@ function Product() {
                     <img className="w-24" src="" alt="" />
                 </div>
                 <div>
-                   <Button variant="primary" style={{ margin: "25px 60px" }}>
-    Add to card
-</Button>
+                    <Button className="mt-2 py-3" variant="primary" style={{ margin: "25px 60px" }}>
+                        Add to card
+                    </Button>
                 </div>
             </div>
         </Container>
