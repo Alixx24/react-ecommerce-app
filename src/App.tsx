@@ -5,12 +5,14 @@ import Cart from "./pages/cart/Cart";
 
 import Product from "./pages/product/Product";
 import Layout from "./components/layout/Layout";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 
 
 function App() {
 
   return (
     <>
+    <ShoppingCartProvider>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -19,6 +21,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </Layout>
+       </ShoppingCartProvider>
     </>
   )
 }

@@ -2,10 +2,13 @@ import { useParams } from "react-router-dom"
 import Container from "../../components/container/Container"
 import Button from "../../components/button/Button";
 import type { IProducts } from "../../types/server";
+import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 
 function Product() {
     const params = useParams<{ id: string }>();
     const [product, setProduct] = useState<IProducts>()
+
+    const { cartItems } = ShoppingCartContext();
     return (
         <Container>
             <div className="h-65 shadow t-4">
